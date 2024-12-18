@@ -48,6 +48,25 @@ function addYourCityInList() {
         console.log(i,cities[i])
     }
 }
+
+function generateTable() {
+    let table = document.getElementById("input").value;
+    if (table === "") {
+        alert("Please Enter which Number of Table you want");
+        return;
+    }
+    
+    // Clear the output element before displaying the updated list
+    document.getElementById("output").innerHTML = "";
+  
+    // Display the multiplication table
+    for (let i = 1; i < 11; i++) {
+        let sum = table * i;
+        // Append each result to the output
+        document.getElementById("output").innerHTML += table + " * " + i + " = " + sum + "<br>";
+        console.log(table, "*", i ,"=",sum);
+    }
+}
 const clearInput = () => {
     document.getElementById("input").value = ""; // Clear the input field
 }
